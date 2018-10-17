@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <center><h1>Sign In</h1><center>
+    <p style="color: red;">{{error}}</p>
+    <center><form method="post", action='login_submit'><center>
+        <div>
+        <label>Username:</label>
+        <input type='text' name='username' value='{{username if username != None}}' required>
+        </div>
+    
+        <div>
+        <label>Password:</label>
+        <input type='password' name='password' required>
+        </div>
+
+        <input type='submit' value='log in'>        
+    </form>
+{% endblock %}

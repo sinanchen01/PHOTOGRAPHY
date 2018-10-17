@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <center><h1>Upload</h1><center>
+    <p style="color: red;">{{error}}</p>
+    <center><form method="post", action='upload_submit'><center>
+        <div>
+        <label>Upload an image:</label>
+        <input type='file' name='image' required>
+        </div>
+ 
+        <input type='submit' value='upload'>        
+    </form>
+{% endblock %}
